@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='intro.css')}}">
+        <title>
+            {% block title %}
+
+            {% endblock %}
+        </title>
+    </head>
+    <body>
+        <!-- Link to add later on!!!-->
+        <a class="navbar-brand" href="#"><img class="logo" src="{{ url_for('static', filename='fancy_logo1.png') }}"></a>
+    
+    <!-- Place in Body where you'd like intro to appear -->
+    <div class="star-wars-intro">
+
+        <audio controls autoplay>
+            <source src="{{ url_for('static', filename='intro_song.mp3') }}" type="audio/mpeg">
+        </audio>
+
+        <!-- Blue Intro Text -->
+        <p class="intro-text">
+        Welcome to the Shop..
+        </p>
+    
+        <!-- Logo Image or Text goes in here -->
+        <h2 class="main-logo">
+        <img src="{{ url_for('static', filename='fancy_logo1.png') }}">
+        </h2>
+    
+        <!-- All Scrolling Content Goes in here -->
+        <div class="main-content">
+    
+        <div class="title-content">
+            <p class="content-header"><br/>The Greatest Shop On Earth</p>
+    
+            <br>
+    
+            <p class="content-body">
+            After thousands of years with no shop created by the Great Robbie Smith, it has finally arrived. The greatest shop on earth. Full of fantastic items that will blow your silly little mind. Be careful not to get too excited, as you may burst into tears ruining my great website.
+            </p>
+    
+            <!-- button or link or whatever -->
+            <a href="{{ url_for('home_page') }}" class="space-button">Browse Items Now!!!</a>
+            
+        </div>
+        </div>
+        </div>
+
+        <div class="background-container">
+        <div class="stars"></div>
+        <div class="twinkling"></div> 
+        <div class="clouds"></div>
+
+        {% block content %} 
+
+        {% endblock %}
+        <!--Future features here-->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+
+
+  </body>
+  
+</html>

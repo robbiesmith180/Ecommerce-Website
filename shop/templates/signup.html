@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+
+<body>
+
+    <a class="logo" href="#"><img class="logo" src="{{ url_for('static', filename='fancy_logo1.png') }}"></a>
+
+    <a href="{{ url_for('home_page') }}">
+    <button data-text="home" class="home-button">
+        <span class="actual-text">&nbsp;home&nbsp;</span>
+        <span class="hover-text" aria-hidden="true">&nbsp;home&nbsp;</span>
+    </button>
+    </a>
+
+    <div class="container">
+        <div class="card">
+            <a class="signup">Sign Up</a>
+            <div class="inputBox1">
+                <input type="text" required="required">
+                <span class="user">Email</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Username</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" required="required">
+                <span>Password</span>
+            </div>
+
+            <button class="enter">Enter</button>
+
+        </div>
+    </div>
+
+</body>
