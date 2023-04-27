@@ -10,9 +10,8 @@
                 <!--Columns here-->
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">Barcode</th>
                 <th scope="col">Price</th>
-                <th scope="col">Options</th>
+                <th scope="col">Environmental Impact</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +20,8 @@
                 <tr>
                     <td>{{ item.id }}</td>
                     <td>{{ item.name }}</td>
-                    <td>{{ item.barcode }}</td>
                     <td>£{{ item.price }}</td>
+                    <td>{{ item.environmental_impact }}</td>
                     <td>
                         <button class="btn btn-outline btn-info">More Info</button>
                         <button class="btn btn-outline btn-success">Purchase This Item</button>
