@@ -57,6 +57,7 @@ margin: 0px;
         transform: translateY(1px);
     }
       
+    /* Animations for Starry Background */
     @keyframes move-background {
         from {
               -webkit-transform: translate3d(0px, 0px, 0px);
@@ -92,6 +93,7 @@ margin: 0px;
           }
       }
       
+      /* Animations for Twinkling Stars */
       .background-container{
           position: fixed;
           top: 0;
@@ -155,6 +157,7 @@ margin: 0px;
         right: 20px;
       }
 
+      /* Animations and styling for Star Wars Intro Text */
       .star-wars-intro {
         background: url("img/stars-bg.jpg") center center;
         width: 100%;
@@ -347,6 +350,7 @@ margin: 0px;
         }
         }
     
+        /* Removes any unwanted features */
         audio{
             display: none;
         }

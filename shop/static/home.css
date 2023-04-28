@@ -1,14 +1,17 @@
+
+/* Home Page Main Text */
 .home-text{
     text-align: center;
     margin-top:  50px;
     border-bottom: 1px solid white;
-    padding-bottom: 20px; /* add some padding to create space between the line and text/button */
+    padding-bottom: 20px; 
     font-family: "Roboto", sans-serif;
 }
 
 .d-block{
   margin: auto;
 }
+/*Shop Button in center of page */
 .shop-btn {
     padding: 0.5em 2em 0.5em 2.5em;
     font-size: 1em;
@@ -46,6 +49,8 @@
   .loader{
     position: fixed;
   }
+
+  /* Lightsaber animation for link to intro */
     .lightsaber {
         position: fixed;
         width: 4px;
@@ -103,6 +108,7 @@
     transform: rotateZ(0deg);
   }
   
+  /* Lightsaber animation */
   .lightsaber.ls-green:before {
     -webkit-animation: showlightgreen 2s ease-in-out infinite 1s;
     animation: showlightgreen 2s ease-in-out infinite 1s;

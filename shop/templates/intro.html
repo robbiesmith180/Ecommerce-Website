@@ -12,12 +12,13 @@
         </title>
     </head>
     <body>
-        <!-- Link to add later on!!!-->
+        <!-- Logo in corner of intro-->
         <a class="navbar-brand" href="#"><img class="logo" src="{{ url_for('static', filename='fancy_logo1.png') }}"></a>
     
     <!-- Place in Body where you'd like intro to appear -->
     <div class="star-wars-intro">
 
+        <!-- Audio for Intro -->
         <audio controls autoplay>
             <source src="{{ url_for('static', filename='intro_song.mp3') }}" type="audio/mpeg">
         </audio>
@@ -27,12 +28,12 @@
         Welcome to the Shop..
         </p>
     
-        <!-- Logo Image or Text goes in here -->
+        <!-- Logo Image pop up -->
         <h2 class="main-logo">
         <img src="{{ url_for('static', filename='fancy_logo1.png') }}">
         </h2>
     
-        <!-- All Scrolling Content Goes in here -->
+        <!-- Iconic Star Wars scrolling text -->
         <div class="main-content">
     
         <div class="title-content">
@@ -44,13 +45,14 @@
             After thousands of years with no shop created by the Great Robbie Smith, it has finally arrived. The greatest shop on earth. Full of fantastic items that will blow your silly little mind. Be careful not to get too excited, as you may burst into tears ruining my great website.
             </p>
     
-            <!-- button or link or whatever -->
+            <!-- Link to Home Page -->
             <a href="{{ url_for('home_page') }}" class="space-button">Browse Items Now!!!</a>
             
         </div>
         </div>
         </div>
 
+        <!-- Space/Stars background-->
         <div class="background-container">
         <div class="stars"></div>
         <div class="twinkling"></div> 

@@ -1,3 +1,4 @@
+<!-- Uses the base template - jinja code-->
 {% extends 'base.html' %} 
 {% block title %} 
     Shop Page
@@ -16,6 +17,7 @@
         </thead>
         <tbody>
             <!--Rows here-->
+            <!-- Jinja syntax to loop through database and print each field for every item-->
             {% for item in items %} 
                 <tr>
                     <td>{{ item.id }}</td>
@@ -23,6 +25,7 @@
                     <td>£{{ item.price }}</td>
                     <td>{{ item.environmental_impact }}</td>
                     <td>
+                        <!-- Add buttons to each item - more info and purchase-->
                         <button class="btn btn-outline btn-info">More Info</button>
                         <button class="btn btn-outline btn-success">Purchase This Item</button>
                     </td>

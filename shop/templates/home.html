@@ -10,6 +10,7 @@
 </head>
 <body>
 
+    <!-- Clashing Lightsabers - link to intro screen-->
     <!-- Need to fix this - shouldn't move with scrolling-->
     <a class="intro-link" href="{{ url_for('intro_page') }}">
         <button class="intro-button">
@@ -25,10 +26,12 @@
         </button>
         </a>
 
+    <!-- Home page text-->
     <div class="home-text">
     <h2> THE COLLECTORS CUT</h2>
     <h4> A PLACE FOR ALL YOUR FILM NEEDS</h4>
 
+    <!-- Shop button in center of page-->
     <a href="{{ url_for('shop_page') }}">
     <button class="shop-btn">
         SHOP NOW
@@ -39,7 +42,7 @@
     </div>
 
     
-    <!-- carousel wip -->
+    <!-- Carousel wip - needs to auto scroll - make photos better -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top: 50px;">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="background-color: black;"></li>
@@ -48,6 +51,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
+            <!-- Each carousel item is a current product - maybe if pressed takes straight to info page?-->
                 <img class="d-block" src="{{ url_for('static', filename='carousel1.jpg') }}" alt="First slide" style="width: 60%; height: 500px;">
             </div>
             <div class="carousel-item">

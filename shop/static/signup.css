@@ -127,7 +127,7 @@
     color: white;
   }
 
-  /* === removing default button style ===*/
+  /* Removing default button style */
 .home-button {
   margin: 0;
   height: auto;
@@ -136,7 +136,7 @@
   border: none;
 }
 
-/* button styling */
+/* button styling for home button */
 .home-button {
   --border-right: 6px;
   --text-stroke-color: rgba(255,255,255,0.6);
@@ -154,7 +154,7 @@
   float: top;
   cursor: pointer;
 }
-/* this is the text, when you hover on button */
+
 .hover-text {
   position: absolute;
   box-sizing: border-box;
@@ -167,7 +167,7 @@
   transition: 0.5s;
   -webkit-text-stroke: 1px var(--animation-color);
 }
-/* hover */
+
 .home-button:hover .hover-text {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color))

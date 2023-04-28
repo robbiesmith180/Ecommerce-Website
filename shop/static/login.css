@@ -13,7 +13,7 @@ body{
     margin: auto;
 }
 
- /* === removing default button style ===*/
+ /* removing default button style */
  .home-button {
   margin: 0;
   height: auto;
@@ -22,7 +22,7 @@ body{
   border: none;
 }
 
-/* button styling */
+/* Button Styling for Home Button */
 .home-button {
   --border-right: 6px;
   --text-stroke-color: rgba(255,255,255,0.6);
@@ -40,7 +40,7 @@ body{
   top: 0;
   left: 0;
 }
-/* this is the text, when you hover on button */
+
 .hover-text {
   position: absolute;
   box-sizing: border-box;
@@ -53,13 +53,13 @@ body{
   transition: 0.5s;
   -webkit-text-stroke: 1px var(--animation-color);
 }
-/* hover */
+
 .home-button:hover .hover-text {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color))
 }
 
-
+/* Styling for the Login Form */
 .form {
     display: flex;
     flex-direction: column;

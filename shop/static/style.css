@@ -1,27 +1,29 @@
 
-body{
-    background-color: black;
-    color: #FFFFFF;
-}
+    body{
+        background-color: black;
+        color: #FFFFFF;
+    }
 
-.logo{
-    width: 120px;
-    height: 120px;
-    max-width: 120px;
-    max-height: 120px;
-}
+    .logo{
+        width: 120px;
+        height: 120px;
+        max-width: 120px;
+        max-height: 120px;
+    }
 
-.navbar{
-    background-color: black !important ;
-    border-bottom: 2px solid white;
-}
+    .navbar{
+        background-color: black !important ; /* !important is used to override the bootstrap css */
+        border-bottom: 2px solid white;
+    }
+
     body, html{
-height: 100%;
-min-height: 100vh;
-margin: 0px;
+      height: 100%;
+      min-height: 100vh;
+      margin: 0px;
 
-}
+    }
 
+    /* Navbar Buttons */
     .btn {
         padding: 0.5em 2em 0.5em 2.5em;
         font-size: 1em;
@@ -57,6 +59,7 @@ margin: 0px;
         transform: translateY(1px);
     }
 
+    /* Social Media Buttons */
     .main {
         display: flex;
         flex-direction: column;

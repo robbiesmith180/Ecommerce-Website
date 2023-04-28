@@ -8,5 +8,6 @@ class Item(db.Model): #Telling flask this class is a model
     description = db.Column(db.String(length = 1024), nullable = False, unique = True)
     environmental_impact = db.Column(db.Integer(), nullable = False)
 
+    #Returns string representation of the object
     def __repr__(self):
         return f'Item {self.name}'
