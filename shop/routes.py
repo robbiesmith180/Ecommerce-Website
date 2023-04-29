@@ -1,5 +1,5 @@
-from flask import render_template
-from shop.models import Item
+from flask import redirect, render_template, request, session, url_for
+from shop.models import Item, User
 from shop import app
 
 @app.route('/intro')
@@ -17,9 +17,20 @@ def shop_page():
         
     return render_template('shop.html', items=items)
 
-@app.route('/login')
+@app.route('/login', methods=['POST', 'GET'])
 def login_page():
-    return render_template('login.html')
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        user = User.query.filter_by(username=username).first()
+        if user and user.password == password:
+            session['user_id'] = user.id
+            return redirect(url_for('home_page'))
+        else:
+            return render_template('login.html', error='Invalid username or password')
+    else:
+        return render_template('login.html', error='Invalid username or password')
 
 @app.route('/poorfromyou')
 def funny_page():

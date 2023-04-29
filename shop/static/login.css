@@ -3,6 +3,17 @@ body{
     background-color: black;
 }
 
+
+.button-form input[type="submit"] {
+  /* Style the input element inside the button */
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
 .logo
 {
     display: flex;
