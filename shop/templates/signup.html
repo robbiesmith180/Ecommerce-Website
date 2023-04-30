@@ -18,31 +18,53 @@
     </button>
     </a>
 
-    <!-- Sign Up Form -->
-    <div class="container">
-        <div class="card">
-            <a class="signup">Sign Up</a>
-            <div class="inputBox1">
-                <input type="text" required="required">
-                <!-- Email Requirement-->
-                <span class="user">Email</span>
-            </div>
-
-            <div class="inputBox">
-                <input type="text" required="required">
-                <!-- Username Requirement-->
-                <span>Username</span>
-            </div>
-
-            <div class="inputBox">
-                <input type="password" required="required">
-                <!-- Password Requirement-->
-                <span>Password</span>
-            </div>
-
-            <button class="enter">Enter</button>
-
+    {% if error %}
+      <label>
+        <input type="checkbox" class="alertCheckbox" autocomplete="off" />
+        <div class="alert error">
+          <span class="alertClose">X</span>
+          <span class="alertText">
+            <div class="error-message"><strong>{{ error }}</strong></div>
+          <br class="clear"/></span>
         </div>
-    </div>
+      </label>
+    {% endif %}
+
+    <!-- Sign Up Form -->
+    <form action="{{ url_for('signup_page') }}" method="post">
+        <div class="container">
+            <div class="card">
+                <a class="signup">Sign Up</a>
+                <div class="inputBox1">
+                    <input type="text" required="required" id="email_address" name="email_address">
+                    <!-- Email Requirement-->
+                    <span class="user">Email</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="text" required="required" id="username" name="username">
+                    <!-- Username Requirement-->
+                    <span>Username</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" required="required" id="password1" name="password1">
+                    <!-- Password Requirement-->
+                    <span>Password</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" required="required" id="password2" name="password2">
+                    <!-- Password Requirement-->
+                    <span>Confirm Password</span>
+                </div>
+
+                <button class="enter">
+                    Enter
+                </button>
+
+            </div>
+        </div>
+    </form>
 
 </body>
