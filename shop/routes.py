@@ -28,9 +28,13 @@ def login_page():
             session['user_id'] = user.id
             return redirect(url_for('home_page'))
         else:
-            return render_template('login.html', error='Invalid username or password')
+            error = 'Invalid username or password'
+            return render_template('login.html', error=error)
     else:
-        return render_template('login.html', error='Invalid username or password')
+        error = None
+
+    return render_template('login.html')
+
 
 @app.route('/poorfromyou')
 def funny_page():

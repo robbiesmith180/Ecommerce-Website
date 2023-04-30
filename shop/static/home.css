@@ -5,12 +5,22 @@
     margin-top:  50px;
     border-bottom: 1px solid white;
     padding-bottom: 20px; 
-    font-family: "Roboto", sans-serif;
+    font-family: 'voyager';
 }
 
 .d-block{
   margin: auto;
 }
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 20px;
+  padding: 5px;
+  height: 40%
+}
+
+
 /*Shop Button in center of page */
 .shop-btn {
     padding: 0.5em 2em 0.5em 2.5em;
