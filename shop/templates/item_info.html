@@ -23,13 +23,16 @@
 
     <div class="card">
         <div class="image">
+        <!-- Use item name from database to get current image-->
         <img src="{{ url_for('static', filename='item_images/' + item.name + '.png') }}" alt="{{ item.name }}" />
         </div>
+        <!-- Use jinja to get item information-->
         <span class="title">{{ item.name }}</span>
         <span class="price">£{{ item.price }}</span>
-        <span class="impact">{{ item.environmental_impact }}%</span>
+        <span class="impact">{{ item.environmental_impact }}% chance of destroying the universe</span>
         <div class="content">
         <span class="description">{{ item.description }}</span>
+        <!-- Purchase button - adds item to cart-->
         <form action="{{ url_for('add_to_cart', item_id=item.id) }}" method="POST">
             <button class="btn-purchase" type="submit">
                 Purchase This Item

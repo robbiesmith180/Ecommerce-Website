@@ -92,6 +92,7 @@ button {
   .btn-checkout{
     margin: auto;
     left: 50px;
+    color: white;
   }
   
   .cta span {

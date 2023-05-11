@@ -11,15 +11,6 @@
 </head>
 <body>
 
-    <div class="advert-container">
-        <div class="advert-carousel">
-            <div class="advert">
-                <img class="advert-photo" src="{{ url_for('static', filename='advert1.jpg') }}" alt="Advert 1"/>
-            </div>
-        </div>
-    </div>
-
-
     <!-- Home page text-->
     <div class="home-text">
     <h2> THE COLLECTORS CUT</h2>
@@ -36,7 +27,7 @@
     </div>
 
     
-    <!-- Carousel wip - needs to auto scroll - make photos better -->
+    <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top: 50px;">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="background-color: black;"></li>
@@ -45,21 +36,20 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ url_for('static', filename='new_item.png') }}" alt="First slide" style="object-fit: cover; height: 70vh;">
+                <img class="d-block w-100" src="{{ url_for('static', filename='actual_shop.png') }}" alt="First slide" style="object-fit: cover; height: 70vh;">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ url_for('static', filename='peaceful.png') }}" alt="Second slide" style="object-fit: cover; height: 70vh;">
+                <img class="d-block w-100" src="{{ url_for('static', filename='ectomobile.png') }}" alt="Second slide" style="object-fit: cover; height: 70vh;">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ url_for('static', filename='item_images/2099 Spiderman Suit.png') }}" alt="Third slide" style="object-fit: cover; height: 60vh;">
+                <img class="d-block w-100" src="{{ url_for('static', filename='peaceful.png') }}" alt="Third slide" style="object-fit: cover; height: 70vh;">
             </div>
         </div>
     </div>
 
         <h4 class="Trends">Trending Items</h4>
-        <!-- Insert 4 images in a row-->
 
-        <!-- Four images in a row -->
+        <!-- Trending Items -->
         <div class="row">
         <img src="{{ url_for('static', filename='item_images/Space Wand.png') }}" alt="Image 1" class="col-md-3 image_1">
         <img src="{{ url_for('static', filename='space_car.jpg') }}" alt="Image 2" class="col-md-3 image_2">
@@ -67,23 +57,43 @@
         <img src="{{ url_for('static', filename='x_wing.png') }}" alt="Image 4" class="col-md-3 image_4">
         </div>
 
-
-
+        <!-- Footer -->
         <div class="container">
             <p class="copyright-message">
                 <em>Copyright © 2023 The Collectors Cut</em>. All rights reserved.
 
-                This website and its content are protected by copyright law. No part of this website may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of [Company Name], except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+                This website and its content are protected by copyright law. No part of this website may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of The Collectors Cut, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
 
                 Unauthorized use of any content on this website may give rise to a claim for damages and/or be a criminal offense.
 
                 All images on this website are AI generated and not real.
 
-                For permission to use any content from this website, please contact <em>The Collectors Cut</em> at [contact email/phone number/address].
+                For permission to use any content from this website, please contact <em>The Collectors Cut</em> at 07928 796615 or thecollectorscut@gmail.com.
             </p>
         </div>
 
+        <!-- Adverts Carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top: 50px;">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="background-color: black;"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1" style="background-color: black;"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2" style="background-color: black;"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='advert1.jpg') }}" alt="First slide" style="object-fit: scale-down; height: 15vh;">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='advert_2.png') }}" alt="Second slide" style="object-fit: scale-down; height: 15vh;">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ url_for('static', filename='advert3.png') }}" alt="Third slide" style="object-fit: scale-down; height: 15vh;">
+                </div>
+            </div>
+        </div>
+
         <script>
+            //Swaps between carousel images
             $(document).ready(function() {
                 $('.carousel').carousel();
             });
@@ -93,20 +103,4 @@
 
 {% endblock %} 
 
-
-<!-- Need to add a search bar at the top of the page-->
-
-<!-- Follow Nike Website-->
- 
-<!-- Comment at top of website followed by shop button-->
-
-<!--Carousel of potential items to buy, scroll enabled by left and right buttons-->
-
-<!--Trending items, potentially-->
-
-<!-- Add copyright and social details at bottom - use uiverse for buttons-->
-
-<!-- Need user login!!!-->
-
-<!-- Potentially implement review system-->
 
