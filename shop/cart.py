@@ -9,7 +9,15 @@ def add_item_to_cart(item_id, user_id):
     if cart is None:
         cart = Cart(user_id=user_id)
         db.session.add(cart)
+        db.session.commit()
+
+    cart_item = CartItem.query.filter_by(item_id=item_id, cart_id=cart.id).first()
+    if cart_item:
+        cart_item.quantity += 1
+    else:
+        cart_item = CartItem(item_id=item_id, cart_id=cart.id)
+        db.session.add(cart_item)
+        db.session.commit()
+
     
-    cart_item = CartItem(item_id=item_id, cart_id=cart.id)
-    db.session.add(cart_item)
-    db.session.commit()
+

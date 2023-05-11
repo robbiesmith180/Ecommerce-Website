@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+    {% block content %}
+
+    <head>
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='cart.css')}}" >
+    </head>
+    
+    <div class="card">
+        <h3>Your Cart</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in items %}
+                <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }}</td>
+                <td class="quantity">{{ item.quantity }}</td>
+                <td>
+                    <div class="remove-button">
+                        <form action="{{ url_for('remove_from_cart', item_id=item.id) }}" method="POST">
+                            <button type="submit">
+                            <ion-icon name="trash-bin-outline"></ion-icon>
+                            </button>
+                        </form>
+                    </div>
+                </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Total:</td>
+                <td>{{ total_price }}</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div class="btn-checkout">
+                        <form action="{{ url_for('checkout') }}" method="POST">
+                            <button class="cta">
+                                <span class="hover-underline-animation"> CHECKOUT</span>
+                                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            </tfoot> 
+        </table>
+    </div>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    {% endblock %}

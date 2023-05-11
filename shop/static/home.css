@@ -5,11 +5,68 @@
     margin-top:  50px;
     border-bottom: 1px solid white;
     padding-bottom: 20px; 
-    font-family: 'voyager';
+    font-family: 'voyager', monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.advert-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 150px;
+  margin: 10px;
+}
+
+.advert-carousel {
+  text-align: center;
+}
+
+.advert-photo{
+  height: 30%;
+  width: 30%;
+  border-radius: 60%;
+  margin: 10px;
+
+}
+
+
+.container p {
+  max-width: 1000px;
+  font-size: 0.8em;
+  padding: 10px;
 }
 
 .d-block{
   margin: auto;
+}
+
+.carousel{
+  width: 100%
+}
+
+.carousel-inner img{
+  width: 100%;
+  height: auto;
+}
+
+.Trends{
+  text-align: center;
+  margin-top:  50px;
+  border-bottom: 1px solid white;
+  padding-bottom: 20px; 
+  font-family: 'voyager', monospace;
+}
+
+.row{
+  padding: 50px;
+  margin: auto;
+  border-bottom: 2px solid white;
 }
 
 
@@ -57,17 +114,18 @@
   }
 
   .loader{
-    position: fixed;
+    position: absolute;
   }
 
   /* Lightsaber animation for link to intro */
     .lightsaber {
-        position: fixed;
+        position: absolute;
         width: 4px;
         height: 12px;
         background-color: #666;
         border-radius: 1px;
         bottom: 0;
+        z-index: 9999;
     }
   
   .lightsaber.ls-left {

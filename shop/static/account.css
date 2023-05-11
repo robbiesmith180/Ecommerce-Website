@@ -1,0 +1,206 @@
+/* you can choose any color you want. don't be afraid to experiment  */
+
+
+body{
+
+    background-color: black;
+}
+
+
+  /* Removing default button style */
+  .home-button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling for home button */
+  .home-button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #10FDF6;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    float: left;
+    float: top;
+    bottom: 220px;
+    cursor: pointer;
+  }
+  
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  
+  .home-button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+  
+
+.logo{
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    /* Center logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+
+}
+
+.form{
+    /* Center Form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 25em;
+    margin-right: 25em;
+    padding: 2em;
+    
+}
+
+.input{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    padding: 10px;
+    border: 0.1px solid #0F9CB4;
+  }
+  
+  .wrapper {
+    position: relative;
+    transform: skewY(-14deg);
+  }
+  
+  .wrapper li, button {
+    position: relative;
+    list-style: none;
+    width: 200px;
+    z-index: var(--i);
+    transition: 0.3s;
+    color: white;
+  }
+  
+  .wrapper li::before, button::before {
+    position: absolute;
+    content: '';
+    background: #122975;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.3s;
+  }
+  
+  .wrapper li::after, button::after {
+    position: absolute;
+    content: '';
+    background: #122975;
+    width: 200px;
+    height: 40px;
+    top: -40px;
+    left: 0;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.3s;
+  }
+  
+  .wrapper li:nth-child(1)::after, .wrapper li:nth-child(1)::before {
+    background-color: #0F9CB4;
+  }
+  
+  .wrapper li:nth-child(2)::after, .wrapper li:nth-child(2)::before {
+    background-color: #1c80bf;
+  }
+  
+  .wrapper li:nth-child(3)::after, .wrapper li:nth-child(3)::before {
+    background-color: #0e5988;
+  }
+  
+  li .input {
+    outline: none;
+    border: none;
+    color: white;
+  }
+  
+  li .input::placeholder {
+    color: white;
+  }
+  
+  li:nth-child(1) .input {
+    background: #0F9CB4;
+  }
+  
+  li:nth-child(2) .input {
+    background: #1c80bf;
+  }
+  
+  li:nth-child(3) .input {
+    background: #0e5988;
+  }
+  
+  
+  li:nth-child(1) .input:focus {
+    outline: none;
+    border: 3.5px solid #d8daf7;
+  }
+  
+  li:nth-child(2) .input:focus {
+    outline: none;
+    border: 3.5px solid #c2c5f3;
+  }
+  
+  li:nth-child(3) .input:focus {
+    outline: none;
+    border: 3.5px solid #989deb;
+  }
+  
+  .wrapper li:hover, button:hover {
+    transform: translateX(-20px);
+  }
+  
+  button:hover, button:hover::before, button:hover::after {
+    background: #575cb5;
+  }
+  
+  button:active {
+    transform: translateX(0px);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

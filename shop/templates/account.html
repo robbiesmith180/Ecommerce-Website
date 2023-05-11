@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='account.css')}}" >
+</head>
+
+    <body>
+
+        <a class="logo" href="#"><img class="logo" src="{{ url_for('static', filename='fancy_logo1.png') }}"></a>
+        
+        <a href="{{ url_for('home_page') }}">
+            <button data-text="home" class="home-button">
+                <span class="actual-text">&nbsp;home&nbsp;</span>
+                <span class="hover-text" aria-hidden="true">&nbsp;home&nbsp;</span>
+            </button>
+        </a>
+        
+        <form class="form">
+            <ul class="wrapper">
+              <li style="--i:4;"><p class="input"><strong>Username: </strong>{{ user.username }}</p></li>
+              <li style="--i:3;"><p class="input"><strong>Password: </strong>{{ user.password }}</p></li>
+              <li style="--i:2;"><p class="input"><strong>Email Address: </strong>{{ user.email_address }}</p></li>
+            </ul>
+          </form>
+          
+          
+    
+    </body>
+</html>

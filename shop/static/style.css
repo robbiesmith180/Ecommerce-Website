@@ -12,7 +12,7 @@
     }
 
     .navbar{
-        background-color: black !important ; /* !important is used to override the bootstrap css */
+        background-color: black !important; /* !important is used to override the bootstrap css */
         border-bottom: 2px solid white;
     }
 
@@ -67,7 +67,7 @@
         /*Center in navbar*/
         align-items: center;
         justify-content: center;
-        margin-right: 225px;
+        margin-right: 155px;
       }
       
       .up {

@@ -1,0 +1,140 @@
+/* Remove the default button styles */
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .quantity{
+    margin: auto;
+  }
+  
+  /* Center the icon vertically and horizontally */
+  button ion-icon {
+    display: block;
+    margin: auto;
+    color: white;
+  }
+
+  .remove-button{
+    padding: 20px;
+  }
+
+  .card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    color: black;
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .card table {
+    width: 100%;
+  }
+  
+  .card th,
+  .card td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .card th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .card tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .card tfoot td {
+    font-weight: bold;
+  }
+  
+  .card .remove-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card button {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  
+  .card button:hover {
+    background-color: #c82333;
+  }
+
+  
+  .cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+    background-color: none;
+
+  }
+
+  .btn-checkout{
+    margin: auto;
+    left: 50px;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
